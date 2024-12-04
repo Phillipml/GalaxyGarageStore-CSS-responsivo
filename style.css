@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  color: #fff;
+}
+body {
+  background-image: url(./images/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header {
+  width: 100%;
+  margin-bottom: 2em;
+  background-color: #190b57;
+  padding: 1%;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container {
+  width: 100%;
+  margin: 0 auto;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+.logo-container img {
+  width: 5em;
+}
+nav {
+  width: 30%;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li {
+  list-style: none;
+  padding: 2%;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.about-section {
+  width: 80%;
+  margin: 56px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-section img {
+  width: 40%;
+}
+.about-text {
+  margin: 0 auto;
+  padding: 10%;
+}
+h3 {
+  padding-bottom: 2%;
+  margin-bottom: 2em;
+  border-bottom: 2px solid #fff;
+}
+.products-wraper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 2%;
+  text-align: center;
+}
+.products-wraper img {
+  max-width: 100%;
+}
+.products-wraper p {
+  padding: 2%;
+}
+.products-wraper button {
+  border-radius: 4px;
+  padding: 2%;
+  background-color: #00d134;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+@media screen and (min-width: 641px) and (max-width: 1023px) and (orientation: landscape) {
+  .logo-container {
+    width: 30%;
+  }
+  .about-section {
+    flex-direction: row;
+  }
+  .products-wraper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) and (orientation: portrait) {
+  .logo-container {
+    width: 70%;
+  }
+  .about-section {
+    flex-direction: column;
+  }
+  .products-wraper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 640px) {
+  .logo-container {
+    display: block;
+    width: 40%;
+    text-align: center;
+  }
+  .logo-container h2,
+  .logo-container p {
+    font-size: 0.8em;
+  }
+  nav {
+    width: 50%;
+  }
+  nav ul {
+    display: block;
+  }
+  .about-section {
+    flex-direction: column;
+  }
+  .products-wraper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
